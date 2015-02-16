@@ -10,9 +10,9 @@ public class Main {
 	  MyLogger log3 = new MyLogger();
 	  
 	  log1.log(Level.INFO, "démarrage de l'application");
-	  log2.warning("pay attention !");
-	  lvl = log2.getLevel();
-	  System.out.println(lvl);
+	  log2.debug("pay attention !");
+	  lvl = log1.getLevel();
+	  System.out.println("niveau de severité :" + lvl);
 	  
 	  log3.logFile("ta guoule");
 	}

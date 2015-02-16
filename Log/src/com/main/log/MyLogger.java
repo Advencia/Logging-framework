@@ -26,23 +26,24 @@ public class MyLogger {
 	
 	/***affiche log console avec un level associé****/
 	void info(String msg) {
-		System.out.println(date +" "+ hour +" INFO:"+msg);
+		System.out.println(date +" "+ hour +" "+ Level.INFO+":"+msg);
 	}
-	void warning(String msg){
-		System.out.println(date +" "+ hour +" WARNING:"+msg);
+	void debug(String msg){
+		System.out.println(date +" "+ hour +" "+ Level.DEBUG +":"+msg);
 	}
 	
 	void error(String msg){
-		System.out.println(date +" "+ hour +" ERROR:"+msg);
+		System.out.println(date +" "+ hour +" "+ Level.ERROR +":"+msg);
 	}
 	
 	/*************Params level***************/
-	void setLevel(Level level){
-		this.level = level;
-	}
 	
 	Level getLevel(){
 		return level;
+	}
+	
+	void setLevel(Level level){
+		this.level = level;
 	}
 
 }

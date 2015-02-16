@@ -34,9 +34,8 @@ public class LogFile extends JFrame {
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setLocationRelativeTo(getParent());
 
-        displayText = new JTextArea(readFile("C:\\Utilisateurs\\coane_000\\Bureau\\Eclipse\\Workspace\\Log\\monFichier.txt"));
+        displayText = new JTextArea(readFile("C:\\Utilisateurs\\coane_000\\git\\Logging-Framework\\Log\\monFichier.txt"));
          
-        // AJOUT DANS LA FENETRE
         add(displayText,BorderLayout.CENTER);
 
         setVisible(true);

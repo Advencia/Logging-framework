@@ -5,19 +5,21 @@ import java.io.BufferedWriter;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.File;
-
 import javax.swing.JFrame;
 import javax.swing.JTextArea;
+import options.CustomFormatter;
 
-public class LogFile extends JFrame {
+public class LogFile extends JFrame /*extends CustomFormatter*/{
 	
 	private JTextArea displayText;
 
-	public LogFile (String msg){
+	public LogFile (CustomFormatter format, String msg){
 		
 		try{
 			BufferedWriter writer = new BufferedWriter(new FileWriter(new File("monFichier.txt")));
-			writer.write(msg); 
+			writer.write(format.getDateHour());
+			writer.write(msg);
+			writer.write(" ");
 			writer.write("\n"); 
 			openWindow();
 			writer.close(); 

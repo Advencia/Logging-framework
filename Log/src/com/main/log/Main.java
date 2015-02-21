@@ -10,10 +10,10 @@ public class Main {
 	  MyLogger log3 = new MyLogger();
 	  
 	  log1.log(Level.INFO, "démarrage de l'application");
-	  log2.debug("pay attention !");
+	  log2.info("pay attention !");
 	  lvl = log1.getLevel();
 	  System.out.println("niveau de severité :" + lvl);
 	  
-	  log3.logFile("ta guoule");
+	  log3.logFile("testing");
 	}
 }
